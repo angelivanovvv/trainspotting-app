@@ -1,0 +1,15 @@
+.app-layout {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include phone {
+        box-sizing: border-box;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

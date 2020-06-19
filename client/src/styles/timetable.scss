@@ -1,0 +1,52 @@
+.app-time-table {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .app-train {
+        position: absolute;
+        z-index: 1;
+        width: 16px;
+        height: 16px;
+        background-color: $white;
+        @include border-radius(10px);
+        background-image: url(../assets/train.svg);
+        background-size: cover;
+    }
+    .app-time-length {
+        height: 16px;
+        background-image: url(../assets/road-texture.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: repeat-x;
+        .app-time-line {
+            position: relative;
+            .app-marker {
+                position: absolute;
+                width: 1px;
+                height: 25px;
+                top: -4px;
+                background: $black;
+            }
+            .app-time {
+                display: inline-block;
+                position: absolute;
+                top: 30px;
+                left: -12px;
+                transform: rotate(-90deg);
+                font-size: 12px;
+                @include desktop {
+                    font-size: 11px;
+                }
+            }
+            .app-station {
+                position: absolute;
+                top: -25px;
+                left: -8px;
+                width: 20px;
+                height: 16px;
+                background-image: url(../assets/station.svg);
+                background-size: cover;
+            }
+        }
+    }
+}

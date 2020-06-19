@@ -1,0 +1,59 @@
+@mixin desktop {
+    @media only screen and (max-width: map-get($breakpoints, 'desktop')) {
+        @content
+    }
+  }
+  
+  @mixin tablet {
+    @media only screen and (max-width: map-get($breakpoints, 'tablet')) {
+        @content
+    }
+  }
+  
+  @mixin phone {
+    @media only screen and (max-width: map-get($breakpoints, 'phone')) {
+        @content
+    }
+  }
+  
+  @mixin smPhone {
+    @media only screen and (max-width: map-get($breakpoints, 'smPhone')) {
+        @content
+    }
+  }
+  
+  @mixin clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+  }
+
+  @mixin border-radius($border) {
+    -webkit-border-radius: $border; 
+    -moz-border-radius: $border; 
+    border-radius: $border;
+  }
+   
+  @mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $color;
+      -moz-box-shadow:inset $top $left $blur $color;
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+    }
+  }

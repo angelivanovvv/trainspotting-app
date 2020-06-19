@@ -1,0 +1,12 @@
+.app-spinner {
+    text-align: center;
+    &.is-centered {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        width: 50px;
+    }
+}

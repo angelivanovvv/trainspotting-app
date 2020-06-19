@@ -1,0 +1,62 @@
+.app-header {
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 15px;
+    .app-header-row {
+        display: -webkit-box; 
+        display: -ms-flexbox;  
+        display: -webkit-flex; 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .app-header-column {
+            &:first-child {
+                margin-right: 15px;
+            }
+            &.app-header-column-mobile {
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+        .app-header-title {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            padding-right: 10px;
+            @include phone {
+               font-size: 16px;
+            }
+        }
+        .app-header-subtitle {
+            font-size: 14px;
+            @include tablet {
+                display: none;
+             }
+        }
+        .app-header-button {
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            @include tablet {
+                display: none;
+             }
+        }
+        .app-header-info {
+            font-size: 14px;
+            padding-left: 5px;
+            @include tablet {
+                display: none;
+             }
+        }
+    }
+}
+
+
+

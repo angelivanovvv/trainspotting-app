@@ -1,0 +1,55 @@
+.app-table-container {
+    width: auto;
+    background-color: $white;
+    @include box-shadow(0, 2px, 10px, rgba(0, 0, 0, 0.15));
+}
+.app-table {
+    width: 100%;
+    border-spacing: 0;
+    .app-table-header {
+        background-color: $tableHeaderBg;
+        tr {
+           text-align: left;
+           & > th {
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                @include desktop {
+                    font-size: 13px;
+                }
+                @include tablet {
+                    font-size: 12px;
+                }
+           } 
+        }
+    }
+    .app-table-body {
+        tr {
+            background-color: $white;
+            &:nth-child(2n + 2) {
+                background-color: $grey;
+            }
+            td {
+                overflow-x: hidden;
+                padding: 15px 10px 15px 15px;
+                font-size: 14px;
+                color: $black;
+                @include desktop {
+                    font-size: 13px;
+                   
+                }
+                @include tablet {
+                    font-size: 12px;
+                    padding: 10px 5px;
+                }
+                @include phone {
+                    font-size: 10px;
+                    padding: 5px 5px;
+                }
+            }
+        }
+    }   
+}
